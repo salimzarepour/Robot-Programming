@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solution For Robot Programming Assignment</title>
+  <link rel="stylesheet" href="./assets/scss/main.scss">
+</head>
+<body>
+  <div class="card text-center">
+    <div class="card-header">
+      Input parameters for robot Programming assignment </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <label id="errorlabel">Please type your parameters and hit the submit button</label></h5>
+      <form class="row g-3" style="padding-top:.2rem ;">
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="inp_room_wide" placeholder="Room Wide">
+
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="inp_room_deep" placeholder="Room Deep">
+
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="inp_pos_x" placeholder="Robot position X">
+
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="inp_pos_y" placeholder="Robot position Y">
+
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="inp_search_commands" placeholder="Your Commands ex: RRFFFFLFFFL">
+
+        </div>
+        <div class="col-md-2">
+          <select class="form-select form-select-sm" id="inp_sel_or" aria-label=".form-select-sm example">
+
+            <option selected value="N">North</option>
+            <option value="S">South</option>
+            <option value="W">West</option>
+            <option value="E">East</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" onclick="generateTable(event)"
+            oninvalid="event.preventDefault();">Submit</button>
+        </div>
+      </form>
+      <div class=" card text-bg-primary mb-3" style="margin-top: .2rem;">
+        <div class="card-header">
+          Robot Room
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">This is the room you requested and answer</h5>
+          <label id="Answerlabel"></label>
+          <p class="card-text">
+          <div style="overflow-x:auto;">
+            <table id="targettbl_id" style="width: 100%; border: 1px solid black;"></table>
+          </div>
+          </p>
+        </div>
+        <div class="card-footer">
+          Creator : Salim Zarepour - +46 766 255 120
+        </div>
+      </div>
+      <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
